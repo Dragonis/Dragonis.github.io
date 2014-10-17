@@ -8,3 +8,5 @@ title: My first post
 <p class="meta">17 October 2014</p>
 
 Lorem ipsum dolor sit amet...
+
+JESTEM SE SAMOCHODZIK

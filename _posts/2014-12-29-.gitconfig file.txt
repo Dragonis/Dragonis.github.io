@@ -8,6 +8,7 @@ title: .gitconfig file configuration
 
 <p class="meta">29 12 2014 - Poland</p>
 
+
 [alias]
 #a - alias
 a = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
@@ -44,16 +45,16 @@ ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
     fo = !git fetch origin
     fd = !git fetch dragonis
 [user]
-	name = Dragonis
-	email = wojtek.sasiela@gmail.com
+    name = Dragonis
+    email = wojtek.sasiela@gmail.com
 [credential]
-	helper = wincred
+    helper = wincred
 [core]
-	autocrlf = input
-	dragonis = https://github.com/Dragonis/hello-world-symfony2-app.git
-	gajdaw = https://github.com/pro-vagrant/hello-world-symfony2-app.git
-	po = !git push origin
+    autocrlf = input
+    dragonis = https://github.com/Dragonis/hello-world-symfony2-app.git
+    gajdaw = https://github.com/pro-vagrant/hello-world-symfony2-app.git
+    po = !git push origin
 [push]
-	default = current
+    default = current
 [color]
-	ui = auto
+    ui = auto

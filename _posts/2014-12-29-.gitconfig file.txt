@@ -4,7 +4,6 @@ title: .gitconfig file configuration
 ---
 
 {{ page.title }}
-================
 
 <p class="meta">29 12 2014 - Poland</p>
 

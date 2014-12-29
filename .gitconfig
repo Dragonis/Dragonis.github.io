@@ -1,0 +1,49 @@
+[alias]
+#a - alias
+a = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+    
+    #update
+    u = !git fetch origin && git rebase origin/$1
+
+ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+    co = checkout 
+    cb = checkout -b 
+    re = reset --hard
+    r = !git remote -v
+    rd = !git remote add dragonis https://github.com/Dragonis/hello-world-symfony2-app.git
+    rg = !git remote add gajdaw https://github.com/pro-vagrant/hello-world-symfony2-app.git
+    fg = !git fetch gajdaw
+    b = branch -v
+    s = status -sb
+    p = push -u origin $1
+    pd = push -u dragonis 
+    f = !git fetch origin
+    bm = branch -m #git branch -m name_branch new_name_branch - change name branch
+    bd = branch -D #git branch -d branch_name - delete local branch
+#usage: git pushit branch-name
+    lg = log --oneline
+    c = !git commit -am
+    i = !git cb dev # && git c "Initialize project"
+    save = !git add -A && !git commit -m 'SAVEPOINT'
+# resets the previous commit, but keeps all the changes from that commit in the working directory.
+    undo = reset HEAD~1 --mixed 
+    vim = config --global -e
+    reset = !git reset --hard
+    st = !git stash
+    sta = !git stash apply
+    fo = !git fetch origin
+    fd = !git fetch dragonis
+[user]
+	name = Dragonis
+	email = wojtek.sasiela@gmail.com
+[credential]
+	helper = wincred
+[core]
+	autocrlf = input
+	dragonis = https://github.com/Dragonis/hello-world-symfony2-app.git
+	gajdaw = https://github.com/pro-vagrant/hello-world-symfony2-app.git
+	po = !git push origin
+[push]
+	default = current
+[color]
+	ui = auto

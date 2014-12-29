@@ -1,22 +1,6 @@
 ---
-layout: default
+theme :
+  name : bootstrap-3
 ---
-
-<html>
-<head>
-<title>{{ page.title }}</title>
-</head>
-
-<div id="post">
-{{ content }}
-</div>
-
-
-  <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-
-</html
+{% include JB/setup %}
+{% include themes/bootstrap-3/default.html %}

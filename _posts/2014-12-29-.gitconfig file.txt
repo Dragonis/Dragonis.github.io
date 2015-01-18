@@ -32,6 +32,6 @@ git config --global alias.vim 'config --global -e' --add <br>
 git config --global alias.reset '!git reset --hard' --add <br>
 git config --global alias.st '!git stash' --add <br>
 git config --global alias.sta '!git stash apply' --add <br>
-git config --global alias.fo '!git fetch origi'n --add <br>
+git config --global alias.fo '!git fetch origin' --add <br>
 git config --global alias.log 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short' --add <br>
 git b<br>

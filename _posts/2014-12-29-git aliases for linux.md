@@ -1,0 +1,37 @@
+---
+layout: post
+title: .gitconfig file configuration
+---
+
+
+{{ page.title }}
+
+<p class="meta">29 12 2014 - Poland</p>
+
+git config --global user.name WojtekSasiela <br>
+git config --global user.email wojtek.sasiela@gmail.com <br>
+git config --global credential.helper wincred <br><br>
+
+git config --global alias.u '!git fetch origin && git rebase origin/$1' --add<br>
+git config --global alias.co checkout --add <br>
+git config --global alias.cb '!git checkout -b' --add <br>
+git config --global alias.re 'reset --hard' --add <br>
+git config --global alias.res 'reset HEAD~1' --add <br>
+git config --global alias.r '!git remote -v' --add <br>
+git config --global alias.b 'branch -v' --add <br>
+git config --global alias.s 'status -sb' --add <br>
+git config --global alias.p 'push -u origin' --add <br>
+git config --global alias.bm 'branch -m' --add <br>
+git config --global alias.bd 'branch -D' --add <br>
+git config --global alias.lg 'log --oneline' --add <br>
+git config --global alias.c '!git commit -am' --add <br>
+git config --global alias.i '!git cb dev # && git c "Initialize project"' --add <br>
+git config --global alias.save '!git add -A && !git commit -m "SAVEPOINT"' --add <br>
+git config --global alias.undo 'reset HEAD~1 --mixed' --add <br>
+git config --global alias.vim 'config --global -e' --add <br>
+git config --global alias.reset '!git reset --hard' --add <br>
+git config --global alias.st '!git stash' --add <br>
+git config --global alias.sta '!git stash apply' --add <br>
+git config --global alias.fo '!git fetch origi'n --add <br>
+git config --global alias.log 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short' --add <br>
+git b<br>

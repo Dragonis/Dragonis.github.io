@@ -14,10 +14,10 @@ git config --global credential.helper wincred <br>
 
 git config --global alias.a '!git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort' --add <br>
 git config --global alias.u '!git fetch origin && git rebase origin/$1' --add<br>
-git config --global alias.co = checkout --add <br>
+git config --global alias.co checkout <br>
 git config --global alias.cb '!git checkout -b' --add <br>
-git config --global alias.re = 'reset --hard' --add <br>
-git config --global alias.res = 'reset HEAD~1' --add <br>
+git config --global alias.re 'reset --hard' --add <br>
+git config --global alias.res 'reset HEAD~1' --add <br>
 git config --global alias.r '!git remote -v' --add <br>
 git config --global alias.b 'branch -v' --add <br>
 git config --global alias.s 'status -sb' --add <br>

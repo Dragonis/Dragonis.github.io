@@ -27,7 +27,7 @@ git config --global alias.bd 'branch -D' <br>
 git config --global alias.lg 'log --oneline' <br>
 git config --global alias.c '!git commit -am' <br>
 git config --global alias.i '!git cb dev # && git c "Initialize project"' <br>
-git config --global alias.save !git add -A && !git commit -m 'SAVEPOINT' <br>
+git config --global alias.save '!git add -A && !git commit -m "SAVEPOINT"' <br>
 git config --global alias.undo 'reset HEAD~1 --mixed' <br>
 git config --global alias.vim 'config --global -e' <br>
 git config --global alias.reset '!git reset --hard' <br>

@@ -1,0 +1,37 @@
+---
+layout: post
+title: git-alias.sh 
+---
+
+
+{{ page.title }}
+
+<p class="meta">18-01-2015 - Poland</p>
+
+git config --global user.name WojtekSasiela
+git config --global user.email wojtek.sasiela@gmail.com
+git config --global credential.helper wincred
+
+git config --global alias.a !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+git config --global alias.u !git fetch origin && git rebase origin/$1
+git config --global alias.co = checkout
+git config --global alias.cb !git checkout -b 
+git config --global alias.re = reset --hard
+git config --global alias.res = reset HEAD~1
+git config --global alias.r = !git remote -v
+git config --global alias.b = branch -v
+git config --global alias.s = status -sb
+git config --global alias.p = push -u origin
+git config --global alias.bm = branch -m
+git config --global alias.bd = branch -D
+git config --global alias.lg = log --oneline
+git config --global alias.c = !git commit -am
+git config --global alias.i = !git cb dev # && git c "Initialize project"
+git config --global alias.save = !git add -A && !git commit -m 'SAVEPOINT'
+git config --global alias.undo = reset HEAD~1 --mixed 
+git config --global alias.vim = config --global -e
+git config --global alias.reset = !git reset --hard
+git config --global alias.st = !git stash
+git config --global alias.sta = !git stash apply
+git config --global alias.fo = !git fetch origin
+git config --global alias.log 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'

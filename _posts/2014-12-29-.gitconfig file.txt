@@ -10,9 +10,8 @@ title: .gitconfig file configuration
 
 git config --global user.name WojtekSasiela <br>
 git config --global user.email wojtek.sasiela@gmail.com <br>
-git config --global credential.helper wincred <br>
+git config --global credential.helper wincred <br><br>
 
-# git config --global alias.a '!git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort' --add <br>
 git config --global alias.u '!git fetch origin && git rebase origin/$1' --add<br>
 git config --global alias.co checkout --add <br>
 git config --global alias.cb '!git checkout -b' --add <br>
@@ -35,3 +34,5 @@ git config --global alias.st '!git stash' --add <br>
 git config --global alias.sta '!git stash apply' --add <br>
 git config --global alias.fo '!git fetch origi'n --add <br>
 git config --global alias.log 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short' --add <br>
+
+git config --global alias.a '!git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort' --add <br>

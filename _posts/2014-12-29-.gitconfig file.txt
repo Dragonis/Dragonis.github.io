@@ -3,57 +3,35 @@ layout: post
 title: .gitconfig file configuration
 ---
 
+
 {{ page.title }}
 
 <p class="meta">29 12 2014 - Poland</p>
 
+git config --global user.name WojtekSasiela
+git config --global user.email wojtek.sasiela@gmail.com
+git config --global credential.helper wincred
 
-[alias]
-#a - alias
-a = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
-    
-    #update
-    u = !git fetch origin && git rebase origin/$1
-
-ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
-    co = checkout 
-    cb = checkout -b 
-    re = reset --hard
-    r = !git remote -v
-    rd = !git remote add dragonis https://github.com/Dragonis/hello-world-symfony2-app.git
-    rg = !git remote add gajdaw https://github.com/pro-vagrant/hello-world-symfony2-app.git
-    fg = !git fetch gajdaw
-    b = branch -v
-    s = status -sb
-    p = push -u origin $1
-    pd = push -u dragonis 
-    f = !git fetch origin
-    bm = branch -m #git branch -m name_branch new_name_branch - change name branch
-    bd = branch -D #git branch -d branch_name - delete local branch
-#usage: git pushit branch-name
-    lg = log --oneline
-    c = !git commit -am
-    i = !git cb dev # && git c "Initialize project"
-    save = !git add -A && !git commit -m 'SAVEPOINT'
-# resets the previous commit, but keeps all the changes from that commit in the working directory.
-    undo = reset HEAD~1 --mixed 
-    vim = config --global -e
-    reset = !git reset --hard
-    st = !git stash
-    sta = !git stash apply
-    fo = !git fetch origin
-    fd = !git fetch dragonis
-[user]
-    name = Dragonis
-    email = wojtek.sasiela@gmail.com
-[credential]
-    helper = wincred
-[core]
-    autocrlf = input
-    dragonis = https://github.com/Dragonis/hello-world-symfony2-app.git
-    gajdaw = https://github.com/pro-vagrant/hello-world-symfony2-app.git
-    po = !git push origin
-[push]
-    default = current
-[color]
-    ui = auto
+git config --global alias.a !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+git config --global alias.u !git fetch origin && git rebase origin/$1
+git config --global alias.co = checkout
+git config --global alias.cb !git checkout -b 
+git config --global alias.re = reset --hard
+git config --global alias.res = reset HEAD~1
+git config --global alias.r = !git remote -v
+git config --global alias.b = branch -v
+git config --global alias.s = status -sb
+git config --global alias.p = push -u origin
+git config --global alias.bm = branch -m
+git config --global alias.bd = branch -D
+git config --global alias.lg = log --oneline
+git config --global alias.c = !git commit -am
+git config --global alias.i = !git cb dev # && git c "Initialize project"
+git config --global alias.save = !git add -A && !git commit -m 'SAVEPOINT'
+git config --global alias.undo = reset HEAD~1 --mixed 
+git config --global alias.vim = config --global -e
+git config --global alias.reset = !git reset --hard
+git config --global alias.st = !git stash
+git config --global alias.sta = !git stash apply
+git config --global alias.fo = !git fetch origin
+git config --global alias.log 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'

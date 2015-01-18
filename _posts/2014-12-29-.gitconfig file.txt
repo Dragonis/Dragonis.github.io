@@ -8,9 +8,9 @@ title: .gitconfig file configuration
 
 <p class="meta">29 12 2014 - Poland</p>
 
-git config --global user.name WojtekSasiela
-git config --global user.email wojtek.sasiela@gmail.com
-git config --global credential.helper wincred
+git config --global user.name WojtekSasiela \
+git config --global user.email wojtek.sasiela@gmail.com \
+git config --global credential.helper wincred \
 
 git config --global alias.a !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 git config --global alias.u !git fetch origin && git rebase origin/$1

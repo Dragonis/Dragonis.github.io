@@ -1,7 +1,6 @@
 ﻿---
 layout: post
-title: 
-symfony2-procedure-creating-site
+title: symfony2-procedure-creating-site
 
 ---
 
@@ -11,4 +10,5 @@ symfony2-procedure-creating-site
 
 
 COMMANDS: <br>
-	pap app/console generate:bundle
+*php app/console generate:bundle* <br>
+**mysql -u root < 00-extra/db/create-empty-database.sql ** <br>
